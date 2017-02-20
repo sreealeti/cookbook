@@ -2,6 +2,7 @@ version: '2'
 services:
   web:
     image: sree/rails-ide
+    command: $APPDIR/tmux_session.sh
     volumes:
       - $DATAVOL:/home/dev/edit-files
     ports:
