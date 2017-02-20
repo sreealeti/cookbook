@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: <%= ENV['COOKBOOK_USER'] %>
+  password: <%= ENV['COOKBOOK_PASSWORD'] %>
+  host: <%= ENV['COOKBOOK_HOST'] %>
+
+development:
+  <<: *default
+  database: <%= ENV['COOKBOOK_DATABASE'] %>
+
+test:
+  <<: *default
+  database: <%= ENV['COOKBOOK_DATABASE_TEST'] %>
+
+production:
+  <<: *default
+  database: <%= ENV['COOKBOOK_DATABASE_PROD'] %>
