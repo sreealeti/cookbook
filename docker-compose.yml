@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    image: sree/rails-ide
+    volumes:
+      - $DATAVOL:/home/dev/edit-files
+    ports:
+      - "3000:3000"
+    external_links:
+      - mysql
+    network_mode: "bridge"
+    env_file: .env

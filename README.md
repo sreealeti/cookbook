@@ -10,6 +10,11 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+    create a file .env under main dir with following values
+      COOKBOOK_DATABASE=db_name
+      COOKBOOK_HOST=db_host
+      COOKBOOK_USER=db_user
+      COOKBOOK_PASSWORD=db_pass
 
 * Database creation
 
